@@ -1,0 +1,72 @@
+<style>
+    .goodsList {
+        position: absolute;
+        top:200px;
+        bottom:0px;
+        width: 100%;
+        height: 100%;
+    }
+    .goodsList ul {
+        width: 100%;
+        height: 100%;
+    }
+    .goodsList ul li {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
+    .goodsList ul li img{
+        width: 100%;
+        height: 100%;
+    }
+    .cellLeft {
+        width: 40%;
+        height: 100%;
+    }
+    .cellLeft img {
+        width: 100%;
+    }
+    .cellRight {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .cellRight>span:nth-child(1){
+        font-size: 15px;
+        flex:2;
+    }
+    .cellRight>span:nth-child(2){
+        flex:3;
+        color: red;
+    }
+    .cellRight>span:nth-child(3){
+        flex: 1;
+        font-size: 12px;
+    }
+</style>
+<ul>
+    %{
+        for(var i=0; i<goods.length;i++){
+            var good = goods[i].value;
+    }%
+        <li>
+            <div class="cellLeft">
+                <img src={-good.cover} alt="">
+            </div>
+            <div class="cellRight">
+                <span>{-good.title}</span>
+                <span>{-good.price}</span>
+                <span>
+                    <span>{-good.mallName}</span>
+                    <span>{-pubDate}</span>
+                    <span></span>
+                </span>
+            </div>
+        </li>
+    %{
+        }
+    }%
+</ul>

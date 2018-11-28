@@ -1,0 +1,28 @@
+<style>
+    @import url("./src/css/swiper.min.css");
+    .swiper-slide img {
+        width: 100%;
+        height: 10rem;
+    }
+    .swiper-container{
+        width: 100%;
+        height: 10rem;
+    }
+</style>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        %{
+            for(var i=0; i<focus.length; i++){
+                var img = focus[i];
+        }%
+            <div class="swiper-slide">
+                <img src={-img.imageUrl}>
+            </div>
+        %{
+            }
+        }%
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
