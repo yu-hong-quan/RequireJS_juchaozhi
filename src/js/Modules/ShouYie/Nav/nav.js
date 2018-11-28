@@ -21,6 +21,8 @@ define(['Et','text!./nav.html','JinXuan','YouHui','HaiTao','FaXian','YuanChuang'
             for(let i=0;i<navBarLength;i++){
                 var navBarAll = navBar[i];
                 navBarAll.onclick = function(){
+                    var Cbn = document.getElementById("ContinerBox");
+                    Cbn.innerHTML = "";
                     switch(i){
                         case 0:
                             JinXuan.initView();

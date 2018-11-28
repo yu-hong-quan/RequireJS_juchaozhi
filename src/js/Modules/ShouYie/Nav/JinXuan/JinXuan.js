@@ -7,7 +7,7 @@ define(['Et','text!./JinXuan.html','./utils/axios'],function(Et,JinXuanHtml,axio
             var params = {
                 sectionId:99,
                 pageNo : 0,
-                pageSize : 30
+                pageSize : 15
             }
             axios.get(baseURL,params).then((resolve)=>{
                 var rs = Et.template(JinXuanHtml,{
@@ -20,7 +20,7 @@ define(['Et','text!./JinXuan.html','./utils/axios'],function(Et,JinXuanHtml,axio
                 goodsList.innerHTML += rs;
                 var ContinerBox = document.getElementById("ContinerBox");
                 ContinerBox.appendChild(goodsList);
-            })
+            });
         }
     }
     return JinXuan;

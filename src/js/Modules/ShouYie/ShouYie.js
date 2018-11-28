@@ -10,6 +10,7 @@ define(['Et','text!./Modules/ShouYie/ShouYie.html','Bnr','Nav','Continer','JinXu
     Et.enableStyle = true;
     var obj = {
         initView : function(){
+            Continer.innerHTML = "";
             var app = document.getElementById("App");
             app.innerHTML = ShouYieHtml;
             Bnr.initView();
